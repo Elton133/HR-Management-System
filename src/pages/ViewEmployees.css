@@ -100,3 +100,9 @@
   align-items: center; /* Vertically centers cards */
   display: flex;
 }
+@media (max-width: 768px) {
+  .view-employees {
+    margin: 0 1em;
+    border-radius: 0;
+  }
+}
