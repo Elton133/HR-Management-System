@@ -7,7 +7,6 @@ form {
   padding: 70px;
   border-radius: 32px;
   background-image: url("../assets/images/bgg.png");
-
   color: rgb(0, 0, 0);
 }
 
@@ -82,5 +81,6 @@ form p:nth-of-type(2) {
 @media (max-width: 768px) {
   form {
     border-radius: 0;
+    height: 100%;
   }
 }
