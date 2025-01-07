@@ -6,7 +6,7 @@ form {
   margin: 0 auto;
   padding: 70px;
   border-radius: 32px;
-  background: linear-gradient(to bottom, #00329c, #051c4f);
+  background-image: url("../assets/images/bgg.png");
 
   color: rgb(0, 0, 0);
 }
@@ -75,8 +75,12 @@ form p:nth-of-type(1),
 form p:nth-of-type(2) {
   color: white;
 }
-.input-wrapper input:valid~span{
+.input-wrapper input:valid ~ span {
   color: #fff;
   transform: translateX(-10px) translateY(-36px);
-
+}
+@media (max-width: 768px) {
+  form {
+    border-radius: 0;
+  }
 }
