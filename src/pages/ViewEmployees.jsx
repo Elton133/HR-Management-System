@@ -16,16 +16,15 @@ const ViewEmployees = () => {
   <div key={index}>
 <div className="profile-container">
             <div>
-            <h4>Profile Card</h4>
             <div className="card">
                 <img className="waves" src={wavy1} alt="" />
                 <img className="avatar" src={avatar} alt="" />
                 <div className='details'>
                     <p className="name">Name: {emp.name}</p>
-                    <p className="title">Position: {emp.position}</p>
-                    <p className='info'>Email:{emp.email}</p>
-                    <p className='info'>Department: {emp.department}</p>
-                    <p className='info'>StartDate: {emp.startDate}</p>
+                    <p className="title"><b>Position</b>: {emp.position}</p>
+                    <p className='info'><b>Email</b>:{emp.email}</p>
+                    <p className='info'><b>Department</b>: {emp.department}</p>
+                    <p className='info'><b>StartDate</b>: {emp.startDate}</p>
                 </div>
 
 
