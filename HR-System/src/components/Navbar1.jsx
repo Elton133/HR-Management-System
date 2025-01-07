@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./Navbar1.css";
 import logo from "../assets/images/stanbic.png";
 
-const Navbar = () => {
+const Navbar1 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -25,24 +25,19 @@ const Navbar = () => {
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           
           <li>
-            <Link className="nav-link" to="/dashboard">
-              Dashboard
+            <Link className="nav-link" to="/add-employee">
+              Add Employee
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/add-employees">
-              Add Employees
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/view-employees">
-              View Employees
+            <Link className="nav-link" to="/employee-list">
+              Employee List
             </Link>
           </li>
         </ul>
 
         <span className="get-started">
-          <Link className="get-started" to="/dashboard">Get Started</Link>
+          <Link className="get-started" to="/add-employee">Get Started</Link>
         </span>
       </nav>
       
@@ -50,4 +45,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar1;

@@ -5,7 +5,7 @@ import { useState } from 'react'
 import './AddEmployee.css'
 
 const AddEmployee = () => {
-  const [employee, setEmployee] = useState({name: "", email: "", position: "", department: ""});
+  const [employee, setEmployee] = useState({name: "", email: "", position: "", department: "", startDate: ""});
 
   const handleChange = (e) =>{
     const {name, value} = e.target;
@@ -47,22 +47,19 @@ const AddEmployee = () => {
   <i className='bx bx-envelope'></i>
   </div>
   <div className='input-wrapper'>
-  <input type="text" name='position' placeholder='Position' onChange={handleChange} />
+  <input className="input-box" type="text" name='position' placeholder='Position' onChange={handleChange} required/>
   <i className='bx bx-briefcase'></i>
   </div>
       
       <div className='input-wrapper'>
-      <input type="text" name="department" placeholder='Department' onChange={handleChange} />
+      <input type="text" name="department" placeholder='Department' onChange={handleChange} required/>
       <i className='bx bx-briefcase'></i>
       </div>
       
-      
-    
- 
       <div className="date-picker-container">
   <input 
     type="date" 
-    name="start-date" 
+    name="startDate" 
     id="startDate" 
     onChange={handleChange} 
     required 

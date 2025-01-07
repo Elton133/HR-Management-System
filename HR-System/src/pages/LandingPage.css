@@ -4,11 +4,12 @@
   align-items: center;
   justify-content: center;
   height: 96vh;
-  background: linear-gradient(to bottom, #00329c, #051c4f);
+  /* background: linear-gradient(to bottom, #00329c, #051c4f); */
+  
   margin: 0 1em;
   /* background-color: #f5f5f5; */
-  /* background-image: url("../assets/images/dots.jpg"); */
-  /* background-color: #f5f5f5; */
+  background-image: url("../assets/images/bgg.png");
+
   background-size: contain;
   border-radius: 38px;
   position: relative;

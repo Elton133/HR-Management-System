@@ -2,10 +2,11 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import AddEmployee from './pages/AddEmployee'
-import EmployeeList from './pages/EmployeeList'
 import LandingPage from './pages/LandingPage'
-
+import Navbar1 from './components/Navbar1'
+import Dashboard from './pages/Dashboard'
+import ViewEmployees from './pages/ViewEmployees'
+import AddEmployee from './pages/AddEmployee'
 
 const App = () => {
   return (
@@ -13,8 +14,10 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<LandingPage />}></Route>
-        <Route path="/add-employee" element={<AddEmployee />}></Route>
-        <Route path="/employee-list" element={<EmployeeList />}></Route>
+        <Route path="/dashboard" element={<Dashboard/>}></Route>
+        <Route path="/add-employees" element={<AddEmployee/>}></Route>
+        <Route path="/view-employees" element={<ViewEmployees/>}></Route>
+        
       </Routes>
       
     </div>

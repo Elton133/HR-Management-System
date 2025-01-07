@@ -79,8 +79,7 @@ const LandingPage = () => {
       </p>
 
       <span className="get-started">
-        <Link className="get-started" to="/add-employee">
-          Get Started
+        <Link className="get-started" to="/dashboard">Get Started
         </Link>
       </span>
     </div>

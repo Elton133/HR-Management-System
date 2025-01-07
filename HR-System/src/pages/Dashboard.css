@@ -1,0 +1,55 @@
+.greeting-message {
+    font-size: 24px;
+    margin-left: 0.3em;
+}
+
+.dashboard {
+    height: 90vh;
+    background-image: url("../assets/images/bgg.png");
+    background-size: contain; /* Ensures the image covers the container */
+    background-position: center;
+    color: white;
+    border-radius: 38px;
+    margin: 0 1em;
+    padding: 1em; /* Adds inner spacing for content */
+    flex-wrap: wrap; /* Makes content wrap nicely */
+    justify-content: space-around; /* Centers cards */
+    align-items: center; /* Vertically centers cards */
+}
+
+.dashboard-cards {
+    width: 250px;
+    border-radius: 16px;
+    background: linear-gradient(to bottom, #00329c, #051c4f);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth with shadow */
+    padding: 1.5em; /* Adjusted for better spacing */
+    margin: 1em; 
+   display: inline-flex;
+   flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.dashboard-cards:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+.card-header {
+    font-size: 20px;
+    font-weight: bold; /* Makes the header stand out */
+    text-align: center; /* Centers the header text */
+    margin-bottom: 0.5em;
+}
+
+.card-content {
+    font-size: 16px;
+    text-align: center; /* Centers card content text */
+    color: #d3d3d3; /* Softer color for content text */
+}
+
+@media(max-width: 768px){
+    .dashboard{
+        margin: 0;
+    }
+}
