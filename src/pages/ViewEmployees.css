@@ -89,20 +89,21 @@
 .view-employees {
   height: 90vh;
   background-image: url("../assets/images/bgg.png");
-  background-size: contain; /* Ensures the image covers the container */
+  background-size: contain;
   background-position: center;
   color: white;
   border-radius: 38px;
   margin: 0 1em;
-  padding: 1em; /* Adds inner spacing for content */
-  flex-wrap: wrap; /* Makes content wrap nicely */
-  justify-content: space-around; /* Centers cards */
-  align-items: center; /* Vertically centers cards */
+  padding: 1em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   display: flex;
 }
 @media (max-width: 768px) {
   .view-employees {
     margin: 0;
     border-radius: 0;
+    height: 100%;
   }
 }
