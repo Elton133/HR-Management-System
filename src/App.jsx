@@ -7,6 +7,7 @@ import Navbar1 from './components/Navbar1'
 import Dashboard from './pages/Dashboard'
 import ViewEmployees from './pages/ViewEmployees'
 import AddEmployee from './pages/AddEmployee'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
         <Route path="/view-employees" element={<ViewEmployees/>}></Route>
         
       </Routes>
-      
+      <Footer/>
     </div>
   )
 }
