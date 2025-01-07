@@ -102,7 +102,7 @@
 }
 @media (max-width: 768px) {
   .view-employees {
-    margin: 0 1em;
+    margin: 0;
     border-radius: 0;
   }
 }
