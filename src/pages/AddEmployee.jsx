@@ -66,6 +66,7 @@ const AddEmployee = () => {
     className="date-input"
     placeholder='Date'
   />
+  <i className='bx bx-calendar'></i>
 </div>
 
       <button className='get-started' type='submit'>Add Employee</button>
