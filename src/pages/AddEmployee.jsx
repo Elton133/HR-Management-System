@@ -56,7 +56,7 @@ const AddEmployee = () => {
       <i className='bx bx-briefcase'></i>
       </div>
       
-      <div className="date-picker-container">
+      <div className="date-picker-container input-wrapper">
   <input 
     type="date" 
     name="startDate" 
