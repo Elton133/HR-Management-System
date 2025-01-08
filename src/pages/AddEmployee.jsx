@@ -7,9 +7,6 @@ import './AddEmployee.css'
 const AddEmployee = () => {
   const [employee, setEmployee] = useState({name: "", email: "", position: "", department: "", startDate: "", photo: ""});
 
-  const departments = ["HR", "Marketing", "IT", "Finance", "Sales", "Operations"]; // List of departments
-  const [selectedDepartment, setSelectedDepartment] = useState("");
-
   const handleDepartmentChange = (e) => {
     const { name, value } = e.target;
     setEmployee((prevEmployee) => ({
@@ -58,7 +55,8 @@ const AddEmployee = () => {
       <i className='bx bx-user'></i>
       </div>
       
-      <p>Work Details <i className='bx bx-briefcase'></i></p>
+    <p>Work Details <i className='bx bx-briefcase'></i></p>
+
     <div className='input-wrapper'>
     <input 
     type="email" 
