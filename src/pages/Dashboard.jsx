@@ -28,6 +28,15 @@ const Dashboard = () => {
         return "Good Evening🌛,";
       }
     }
+    const employees = JSON.parse(localStorage.getItem("employees")) || [];
+
+    const countByDepartment = {};
+
+    employees.forEach(employee =>{
+      const department = employee.department;
+
+      countByDepartment[department] = (countByDepartment[department] || 0) + 1;
+    });
   
   return (
     <div className='dashboard'>
@@ -53,12 +62,12 @@ const Dashboard = () => {
       </div>
       <div className='dashboard-cards'>
         <p className='card-header'>Departments <i className='bx bx-briefcase'></i></p>
-        <p>Retail Banking</p>
-        <p>Loan Management</p>
-        <p>Operations</p>
-        <p>IT</p>
-        <p>Marketing</p>
-        <p>HR</p>
+        <ul>
+          {Object.entries(countByDepartment).map(([department, count]) => (
+            <li key={department}>{department}: {count}</li>
+          ))}
+          
+        </ul>
       </div>
         
     </div>

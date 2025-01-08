@@ -5,8 +5,18 @@ import { useState } from 'react'
 import './AddEmployee.css'
 
 const AddEmployee = () => {
-  const [employee, setEmployee] = useState({name: "", email: "", position: "", department: "", startDate: ""});
+  const [employee, setEmployee] = useState({name: "", email: "", position: "", department: "", startDate: "", photo: ""});
 
+  const departments = ["HR", "Marketing", "IT", "Finance", "Sales", "Operations"]; // List of departments
+  const [selectedDepartment, setSelectedDepartment] = useState("");
+
+  const handleDepartmentChange = (e) => {
+    const { name, value } = e.target;
+    setEmployee((prevEmployee) => ({
+      ...prevEmployee,
+      [name]: value,
+    }));
+  };
   const handleChange = (e) =>{
     const {name, value} = e.target;
     setEmployee({...employee, [name]: value});
@@ -18,6 +28,20 @@ const AddEmployee = () => {
 
     localStorage.setItem("employees", JSON.stringify([...employees, employee]));
     alert("Employee added successfully");
+  };
+
+  const handlePhotoUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setEmployee((prevEmployee) => ({
+          ...prevEmployee,
+          photo: reader.result, 
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
   };
   return (
     <>
@@ -51,10 +75,24 @@ const AddEmployee = () => {
   <i className='bx bx-briefcase'></i>
   </div>
       
-      <div className='input-wrapper'>
-      <input type="text" name="department" placeholder='Department' onChange={handleChange} required/>
-      <i className='bx bx-briefcase'></i>
-      </div>
+  <div className="input-wrapper">
+  <select
+  name="department"
+  value={employee.department || ""}
+  onChange={handleDepartmentChange}
+  required
+>
+  <option value="" disabled>
+    Choose a department 
+  </option>
+  <option value="HR">HR</option>
+  <option value="Marketing">Marketing</option>
+  <option value="IT">IT</option>
+  <option value="Retail Banking">Retail Banking</option>
+  <option value="Teller">Teller Department</option>
+</select>
+
+    </div>
       
       <div className="date-picker-container input-wrapper">
   <input 
@@ -68,6 +106,16 @@ const AddEmployee = () => {
   />
   <i className='bx bx-calendar'></i>
 </div>
+
+<div className="input-wrapper">
+  <p>Upload Image</p>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handlePhotoUpload}
+          className="file-input border-gray-300 p-2 rounded w-full"
+        />
+      </div>
 
       <button className='get-started' type='submit'>Add Employee</button>
     </form>
